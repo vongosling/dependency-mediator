@@ -83,12 +83,12 @@ public class ConflictDetectorMojo extends AbstractMojo {
 	 */
 	public void execute() throws MojoExecutionException, MojoFailureException {
 		if (skip) {
-			getLog().info(artifactId + " conflict checking skipped");
+			getLog().info(getArtifactId() + " conflict checking skipped");
 			return;
 		}
 		checkProjectType();
-		File dependencyFolder = new File(new File(new File(this.targetDir),
-				this.finalName), "WEB-INF/lib");
+		File dependencyFolder = new File(new File(new File(getTargetDir()),
+				getFinalName()), "WEB-INF/lib");
 
 		if (!dependencyFolder.exists()) {
 			throw new MojoExecutionException(dependencyFolder
@@ -119,7 +119,7 @@ public class ConflictDetectorMojo extends AbstractMojo {
 		String packagingType = model.getPackaging();
 		if (!"war".equalsIgnoreCase(packagingType)) {
 			throw new MojoExecutionException(
-					"only can be used to check war project");
+					"Only can be used to check war project");
 		}
 	}
 
@@ -153,11 +153,11 @@ public class ConflictDetectorMojo extends AbstractMojo {
 		try {
 			model = pomReader.read(new FileReader(pom));
 		} catch (Exception e) {
-			throw new MojoExecutionException("Error to read pom: "
+			throw new MojoExecutionException("Error to load pom: "
 					+ e.getMessage(), e);
 		}
 		if (model == null) {
-			throw new MojoExecutionException("Failed to read pom: "
+			throw new MojoExecutionException("Failed to load pom: "
 					+ pom.getAbsolutePath());
 		}
 		return model;
@@ -195,15 +195,14 @@ public class ConflictDetectorMojo extends AbstractMojo {
 	private void printResult() {
 		Set<String> jarFileNames = new HashSet<String>();
 		if (this.duplicateContainer.isEmpty()) {
-			getLog().info("#################################################");
 			getLog().info(
-					"#################################################\n\n\n");
-			getLog().info(this.artifactId + " has no class conflicts");
+					"------------------------------------------------------------------------\n\n");
+			getLog().info(this.artifactId + " has no conflicts");
 			getLog().info(
-					"\n\n\n#################################################");
-			getLog().info("#################################################");
+					"\n\n------------------------------------------------------------------------");
 		} else {
-			getLog().info("==================================");
+			getLog().info(
+					"------------------------------------------------------------------------");
 			StringBuilder result = new StringBuilder(
 					"\nduplicate class file list: ");
 			for (Map.Entry<String, Set<String>> e : this.duplicateContainer.duplicateEntries
@@ -224,7 +223,8 @@ public class ConflictDetectorMojo extends AbstractMojo {
 				jarFileResult.append("\t").append(f).append("\n");
 			}
 			getLog().warn(jarFileResult.toString());
-			getLog().info("==================================");
+			getLog().info(
+					"------------------------------------------------------------------------");
 			System.exit(1);
 		}
 	}
@@ -304,7 +304,7 @@ public class ConflictDetectorMojo extends AbstractMojo {
 	 */
 	public void copyDependencies(File dependencyFolder)
 			throws MojoFailureException, MojoExecutionException {
-		getLog().info("start to copy dependencies");
+		getLog().info("Start to copy dependencies");
 		Commandline cl = new Commandline();
 		cl.setExecutable("mvn");
 		cl.createArg().setValue("clean");
@@ -318,7 +318,7 @@ public class ConflictDetectorMojo extends AbstractMojo {
 					"-DexcludeArtifactIds=" + excludedArtifactIds);
 			if (debug) {
 				getLog().info(
-						"====excluded artifact ids: " + excludedArtifactIds);
+						"====Excluded artifact ids: " + excludedArtifactIds);
 			}
 		} else {
 			if (debug) {
@@ -336,9 +336,33 @@ public class ConflictDetectorMojo extends AbstractMojo {
 			throw new MojoFailureException(message);
 		}
 		if (result != 0) {
-			getLog().error("failed to copy dependencies");
+			getLog().error("Failed to copy dependencies");
 			System.exit(result);
 		}
+	}
+
+	public String getTargetDir() {
+		return targetDir;
+	}
+
+	public void setTargetDir(String targetDir) {
+		this.targetDir = targetDir;
+	}
+
+	public String getArtifactId() {
+		return artifactId;
+	}
+
+	public void setArtifactId(String artifactId) {
+		this.artifactId = artifactId;
+	}
+
+	public String getFinalName() {
+		return finalName;
+	}
+
+	public void setFinalName(String finalName) {
+		this.finalName = finalName;
 	}
 
 }
