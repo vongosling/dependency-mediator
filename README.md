@@ -1,28 +1,28 @@
 # Dependency mediator project
 
-#### Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflict or incompatible problems before the runtime(try to remedy some unexpected exceptions or errors),also it can help you find the compatible problem between any two java component.
-#### Nowadays,I have provided one maven plugin.but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future. 
+##### Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflict or incompatible problems before the runtime(try to remedy some unexpected exceptions or errors),also it can help you find the compatible problem between any two java component.
+##### Nowadays,I have provided one maven plugin.but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future. 
  
 ## Features
-#### 1.Compatible with maven 3.x.x plugin programming model
-#### 2.Compatible with JDK 6+
-#### 3.Support directory scan,including classpath
-#### 4.Support component scan,including jar,war,ear,sar and so on
-#### 5.Support duplicate classes scan,duplicate means the same fully-qualified class name, but not the same digest or incompatible class(details see [jls](http://docs.oracle.com/javase/specs/jls/se7/html/jls-13.html) and [class compatibility](http://www.oracle.com/technetwork/java/javase/compatibility-137541.html))
+###### 1.Compatible with maven 3.x.x plugin programming model
+###### 2.Compatible with JDK 6+
+###### 3.Support directory scan,including classpath
+###### 4.Support component scan,including jar,war,ear,sar and so on
+###### 5.Support duplicate classes scan,duplicate means the same fully-qualified class name, but not the same digest or incompatible class(details see [jls](http://docs.oracle.com/javase/specs/jls/se7/html/jls-13.html) and [class compatibility](http://www.oracle.com/technetwork/java/javase/compatibility-137541.html))
 
 
 
 ## Available version
-##### 1.1.0 will release on 2014.11.08
-##### Optimize - less code,more things;
-##### Feature - Abstract version incompatible algorithm,support customized version diff strategy;
-##### Feature - Support duplicate incompatible class scan
+###### 1.1.0 will release on 2014.11.08
+###### Optimize - less code,more things;
+###### Feature - Abstract version incompatible algorithm,support customized version diff strategy;
+###### Feature - Support duplicate incompatible class scan
  
-##### 1.0.0 release on 2014.10.08
-##### Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
-##### Feature - Core module support directory scan,also including classpath if you set property scanClasspath;
-##### Feature - Maven plugin support war and jar package type scan;
-##### Feature - Support duplicate digest classes scan
+###### 1.0.0 release on 2014.10.08
+###### Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
+###### Feature - Core module support directory scan,also including classpath if you set property scanClasspath;
+###### Feature - Maven plugin support war and jar package type scan;
+###### Feature - Support duplicate digest classes scan
 
 ## How to Use
 
