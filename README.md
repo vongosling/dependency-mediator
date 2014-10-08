@@ -13,16 +13,16 @@
 
 
 ## Available version
-#### 1.1.0 will release on 2014.11.08
-#### Optimize - less code,more things;
-#### Feature - Abstract version incompatible algorithm,support customized version diff strategy;
-#### Feature - Support duplicate incompatible class scan
+##### 1.1.0 will release on 2014.11.08
+##### Optimize - less code,more things;
+##### Feature - Abstract version incompatible algorithm,support customized version diff strategy;
+##### Feature - Support duplicate incompatible class scan
  
-#### 1.0.0 release on 2014.10.08
-#### Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
-#### Feature - Core module support directory scan,also including classpath if you set property scanClasspath;
-#### Feature - Maven plugin support war and jar package type scan;
-#### Feature - Support duplicate digest classes scan
+##### 1.0.0 release on 2014.10.08
+##### Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
+##### Feature - Core module support directory scan,also including classpath if you set property scanClasspath;
+##### Feature - Maven plugin support war and jar package type scan;
+##### Feature - Support duplicate digest classes scan
 
 ## How to Use
 
