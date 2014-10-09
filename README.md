@@ -21,7 +21,6 @@
 ###### 1.0.0 release on 2014.10.08
 ###### Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
 ###### Feature - Core module support directory scan,also including classpath if you set property scanClasspath;
-###### Feature - Maven plugin support war and jar package type scan;
 ###### Feature - Support duplicate digest classes scan
 
 ## How to Use
@@ -63,10 +62,10 @@ Output may be like this if you use standalone mode:
  	    
 But if you using maven plugin,ouput may be like this:
 
-    [WARNING] Founded conflict dependency components:org.apache.commons:commons-lang3:jar
+    [WARNING] Founded conflict dependency component:org.apache.commons:commons-lang3:jar
      Resolved version is org.apache.commons:commons-lang3:jar:3.1:compile
      But found conflict artifact org.apache.commons:commons-lang3:3.3.2
-    [WARNING] Founded conflict dependency components:org.apache.thrift:libthrift:jar
+    [WARNING] Founded conflict dependency component:org.apache.thrift:libthrift:jar
      Resolved version is org.apache.thrift:libthrift:jar:0.8.0:compile
      But found conflict artifact org.apache.thrift:libthrift:0.9.1
 
