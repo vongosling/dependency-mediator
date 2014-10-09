@@ -16,12 +16,12 @@
 ###### 1.1.0 will release on 2014.11.08
 ###### Optimize - less code,more things;
 ###### Feature - Abstract version incompatible algorithm,support customized version diff strategy;
-###### Feature - Support duplicate incompatible class scan
+###### Feature - Support conflicting incompatible class scan
  
 ###### 1.0.0 release on 2014.10.08
 ###### Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
 ###### Feature - Core module support directory scan,also including classpath if you set property scanClasspath;
-###### Feature - Support duplicate digest classes scan
+###### Feature - Support conflicting digest classes scan
 
 ## How to Use
 
