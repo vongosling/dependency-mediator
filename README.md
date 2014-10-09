@@ -8,7 +8,7 @@
 ###### 2.Compatible with JDK 6+
 ###### 3.Support directory scan,including classpath
 ###### 4.Support component scan,including jar,war,ear,sar and so on
-###### 5.Support duplicate classes scan,duplicate means the same fully-qualified class name, but not the same digest or incompatible class(details see [jls](http://docs.oracle.com/javase/specs/jls/se7/html/jls-13.html) and [class compatibility](http://www.oracle.com/technetwork/java/javase/compatibility-137541.html))
+###### 5.Support conflicting classes scan,conflict means the same fully-qualified class name, but not the same digest or incompatible class(details see [jls](http://docs.oracle.com/javase/specs/jls/se7/html/jls-13.html) and [class compatibility](http://www.oracle.com/technetwork/java/javase/compatibility-137541.html))
 
 
 
@@ -55,24 +55,24 @@ You can invoke the command ***mvn exec:java -Dexec.args="scanWhere -DscanClasspa
 Output may be like this if you use standalone mode:
    
     Output component reactor info......
-    Duplicated component  [com.alibaba.rocketmq.storm.MessageConsumer] was founded in the  path : 
+    Conflicting component  [com.alibaba.rocketmq.storm.MessageConsumer] was founded in the  path : 
  	    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT-11/com/alibaba/rocketmq/storm/MessageConsumer.class
  	    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT/com/alibaba/rocketmq/storm/MessageConsumer.class
  	    
  	    
 But if you using maven plugin,ouput may be like this:
 
-    [WARNING] Founded conflict dependency component:org.apache.commons:commons-lang3:jar
+    [WARNING] Founded conflicting dependency component:org.apache.commons:commons-lang3:jar
      Resolved version is org.apache.commons:commons-lang3:jar:3.1:compile
-     But found conflict artifact org.apache.commons:commons-lang3:3.3.2
-    [WARNING] Founded conflict dependency component:org.apache.thrift:libthrift:jar
+     But found conflicting artifact org.apache.commons:commons-lang3:3.3.2
+    [WARNING] Founded conflicting dependency component:org.apache.thrift:libthrift:jar
      Resolved version is org.apache.thrift:libthrift:jar:0.8.0:compile
-     But found conflict artifact org.apache.thrift:libthrift:0.9.1
+     But found conflicting artifact org.apache.thrift:libthrift:0.9.1
 
 
 ## Background 
 
-As we know,when we are building a web project,we often use maven dependency plugin(if maven project) to solve jar conflict,such as:mvn dependency:tree -Dverbose -Dincludes=commons-collections,
+As we know,when we are building a web project,we often use maven dependency plugin(if maven project) to solve the jar conflicting problem,such as:mvn dependency:tree -Dverbose -Dincludes=commons-collections,
 but if we build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict jar packages.of course,which 
 depend on Java EE container classloader's class loading mechanism.
 
