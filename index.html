@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dependency-mediator by vongosling</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Dependency-mediator</h1>
+        <p>Concentrated on solving java component conflict or incompatible !</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/vongosling/dependency-mediator" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/vongosling/dependency-mediator/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/vongosling/dependency-mediator/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="dependency-mediator-project" class="anchor" href="#dependency-mediator-project"><span class="octicon octicon-link"></span></a>Dependency mediator project</h1>
+
+<h5>
+<a name="unlike-karaf-and-other-lightness-osgi-solutionsdependency-mediator-focus-on-shooting-the-conflict-or-incompatible-problems-before-the-runtimetry-to-remedy-some-unexpected-exceptions-or-errorsalso-it-can-help-you-find-the-compatible-problem-between-any-two-java-component" class="anchor" href="#unlike-karaf-and-other-lightness-osgi-solutionsdependency-mediator-focus-on-shooting-the-conflict-or-incompatible-problems-before-the-runtimetry-to-remedy-some-unexpected-exceptions-or-errorsalso-it-can-help-you-find-the-compatible-problem-between-any-two-java-component"><span class="octicon octicon-link"></span></a>Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflict or incompatible problems before the runtime(try to remedy some unexpected exceptions or errors),also it can help you find the compatible problem between any two java component.</h5>
+
+<h5>
+<a name="nowadaysi-have-provided-one-maven-pluginbut-in-my-opinionintegration-with-the-maven-standard-enforcer-plugin-may-be-a-better-choice-i-would-try-in-the-near-future" class="anchor" href="#nowadaysi-have-provided-one-maven-pluginbut-in-my-opinionintegration-with-the-maven-standard-enforcer-plugin-may-be-a-better-choice-i-would-try-in-the-near-future"><span class="octicon octicon-link"></span></a>Nowadays,I have provided one maven plugin.but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future.</h5>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<h6>
+<a name="1compatible-with-maven-3xx-plugin-programming-model" class="anchor" href="#1compatible-with-maven-3xx-plugin-programming-model"><span class="octicon octicon-link"></span></a>1.Compatible with maven 3.x.x plugin programming model</h6>
+
+<h6>
+<a name="2compatible-with-jdk-6" class="anchor" href="#2compatible-with-jdk-6"><span class="octicon octicon-link"></span></a>2.Compatible with JDK 6+</h6>
+
+<h6>
+<a name="3support-directory-scanincluding-classpath" class="anchor" href="#3support-directory-scanincluding-classpath"><span class="octicon octicon-link"></span></a>3.Support directory scan,including classpath</h6>
+
+<h6>
+<a name="4support-component-scanincluding-jarwarearsar-and-so-on" class="anchor" href="#4support-component-scanincluding-jarwarearsar-and-so-on"><span class="octicon octicon-link"></span></a>4.Support component scan,including jar,war,ear,sar and so on</h6>
+
+<h6>
+<a name="5support-duplicate-classes-scanduplicate-means-the-same-fully-qualified-class-name-but-not-the-same-digest-or-incompatible-classdetails-see-jls-and-class-compatibility" class="anchor" href="#5support-duplicate-classes-scanduplicate-means-the-same-fully-qualified-class-name-but-not-the-same-digest-or-incompatible-classdetails-see-jls-and-class-compatibility"><span class="octicon octicon-link"></span></a>5.Support duplicate classes scan,duplicate means the same fully-qualified class name, but not the same digest or incompatible class(details see <a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-13.html">jls</a> and <a href="http://www.oracle.com/technetwork/java/javase/compatibility-137541.html">class compatibility</a>)</h6>
+
+<h2>
+<a name="available-version" class="anchor" href="#available-version"><span class="octicon octicon-link"></span></a>Available version</h2>
+
+<h6>
+<a name="110-will-release-on-20141108" class="anchor" href="#110-will-release-on-20141108"><span class="octicon octicon-link"></span></a>1.1.0 will release on 2014.11.08</h6>
+
+<h6>
+<a name="optimize---less-codemore-things" class="anchor" href="#optimize---less-codemore-things"><span class="octicon octicon-link"></span></a>Optimize - less code,more things;</h6>
+
+<h6>
+<a name="feature---abstract-version-incompatible-algorithmsupport-customized-version-diff-strategy" class="anchor" href="#feature---abstract-version-incompatible-algorithmsupport-customized-version-diff-strategy"><span class="octicon octicon-link"></span></a>Feature - Abstract version incompatible algorithm,support customized version diff strategy;</h6>
+
+<h6>
+<a name="feature---support-duplicate-incompatible-class-scan" class="anchor" href="#feature---support-duplicate-incompatible-class-scan"><span class="octicon octicon-link"></span></a>Feature - Support duplicate incompatible class scan</h6>
+
+<h6>
+<a name="100-release-on-20141008" class="anchor" href="#100-release-on-20141008"><span class="octicon octicon-link"></span></a>1.0.0 release on 2014.10.08</h6>
+
+<h6>
+<a name="feature---compatible-with-jdk-6maven-22x-and-3xx-plugin-programming-model" class="anchor" href="#feature---compatible-with-jdk-6maven-22x-and-3xx-plugin-programming-model"><span class="octicon octicon-link"></span></a>Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;</h6>
+
+<h6>
+<a name="feature---core-module-support-directory-scanalso-including-classpath-if-you-set-property-scanclasspath" class="anchor" href="#feature---core-module-support-directory-scanalso-including-classpath-if-you-set-property-scanclasspath"><span class="octicon octicon-link"></span></a>Feature - Core module support directory scan,also including classpath if you set property scanClasspath;</h6>
+
+<h6>
+<a name="feature---maven-plugin-support-war-and-jar-package-type-scan" class="anchor" href="#feature---maven-plugin-support-war-and-jar-package-type-scan"><span class="octicon octicon-link"></span></a>Feature - Maven plugin support war and jar package type scan;</h6>
+
+<h6>
+<a name="feature---support-duplicate-digest-classes-scan" class="anchor" href="#feature---support-duplicate-digest-classes-scan"><span class="octicon octicon-link"></span></a>Feature - Support duplicate digest classes scan</h6>
+
+<h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to Use</h2>
+
+<h3>
+<a name="maven-plugincompatible-with-maven-3xx" class="anchor" href="#maven-plugincompatible-with-maven-3xx"><span class="octicon octicon-link"></span></a>Maven plugin(Compatible with maven 3.x.x)</h3>
+
+<pre><code>&lt;plugin&gt;
+    &lt;groupId&gt;com.creative.studio.component&lt;/groupId&gt;
+    &lt;artifactId&gt;dependency-mediator-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/plugin&gt;
+</code></pre>
+
+<p>you can also add plugin's groupId to the list of groupIds searched by default. To do this, you need to add the following to your ${user.home}/.m2/settings.xml file:</p>
+
+<pre><code>&lt;pluginGroups&gt;
+   &lt;pluginGroup&gt;com.creative.studio.component&lt;/pluginGroup&gt;
+&lt;/pluginGroups&gt;
+</code></pre>
+
+<p>finally,you can run the mojo with <strong><em>mvn mediator:check</em></strong></p>
+
+<h3>
+<a name="standalone" class="anchor" href="#standalone"><span class="octicon octicon-link"></span></a>Standalone</h3>
+
+<p>After import the following jar</p>
+
+<pre><code>&lt;dependency&gt;
+   &lt;groupId&gt;com.creative.studio.component&lt;/groupId&gt;
+   &lt;artifactId&gt;dependency-mediator-core&lt;/artifactId&gt;
+   &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>You can invoke the command <strong><em>mvn exec:java -Dexec.args="scanWhere -DscanClasspath"</em></strong> in maven project or invoke class DependencyMediator</p>
+
+<h2>
+<a name="usecase" class="anchor" href="#usecase"><span class="octicon octicon-link"></span></a>Usecase</h2>
+
+<p>Output may be like this if you use standalone mode:</p>
+
+<pre><code>Output component reactor info......
+Duplicated component  [com.alibaba.rocketmq.storm.MessageConsumer] was founded in the  path : 
+    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT-11/com/alibaba/rocketmq/storm/MessageConsumer.class
+    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT/com/alibaba/rocketmq/storm/MessageConsumer.class
+</code></pre>
+
+<p>But if you using maven plugin,ouput may be like this:</p>
+
+<pre><code>[WARNING] Founded conflict dependency components:org.apache.commons:commons-lang3:jar
+ Resolved version is org.apache.commons:commons-lang3:jar:3.1:compile
+ But found conflict artifact org.apache.commons:commons-lang3:3.3.2
+[WARNING] Founded conflict dependency components:org.apache.thrift:libthrift:jar
+ Resolved version is org.apache.thrift:libthrift:jar:0.8.0:compile
+ But found conflict artifact org.apache.thrift:libthrift:0.9.1
+</code></pre>
+
+<h2>
+<a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h2>
+
+<p>As we know,when we are building a web project,we often use maven dependency plugin(if maven project) to solve jar conflict,such as:mvn dependency:tree -Dverbose -Dincludes=commons-collections,
+but if we build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict jar packages.of course,which 
+depend on Java EE container classloader's class loading mechanism.</p>
+
+<p>Now,dependency mediator can help you to solve this problem,if you have better idea or improving suggestion,please contact <a href="fengjia10@gmail.com">me</a></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/vongosling">vongosling</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-55583532-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
