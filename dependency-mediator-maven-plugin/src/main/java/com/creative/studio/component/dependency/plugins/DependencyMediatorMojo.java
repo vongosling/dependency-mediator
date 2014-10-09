@@ -179,12 +179,12 @@ public class DependencyMediatorMojo extends AbstractMojo {
                         .entrySet().iterator();
                 while (iter.hasNext()) {
                     Entry<String, List<Artifact>> conflictEntries = iter.next();
-                    StringBuilder sb = new StringBuilder("Founded conflict dependency components:");
+                    StringBuilder sb = new StringBuilder("Founded conflicting dependency component:");
                     List<Artifact> conflictArtifacts = conflictEntries.getValue();
                     sb.append(conflictEntries.getKey())
                             .append("\n Resolved version is "
                                     + results.get(conflictEntries.getKey()))
-                            .append("\n But found conflict artifact ");
+                            .append("\n But found conflicting artifact ");
                     for (Artifact at : conflictArtifacts) {
                         sb.append(String.format("%s:%s:%s,", at.getGroupId(), at.getArtifactId(),
                                 at.getVersion()));
@@ -243,7 +243,7 @@ public class DependencyMediatorMojo extends AbstractMojo {
             if (entry.getValue().size() > 1) {
                 count++;
                 getLog().warn(
-                        String.format("Duplicated component  [%s] was founded in the  path : \n",
+                        String.format("Conflicting component  [%s] was founded in the  path : \n",
                                 entry.getKey()));
                 for (ComponentEntry jar : entry.getValue()) {
                     getLog().warn(String.format(" \t%s\n", jar.getPathName()));
@@ -251,7 +251,7 @@ public class DependencyMediatorMojo extends AbstractMojo {
             }
         }
         if (count == 0) {
-            getLog().info("Congratulations,no component conflict or incompatible !");
+            getLog().info("Congratulations,no conflicting component  exist!");
         }
     }
 

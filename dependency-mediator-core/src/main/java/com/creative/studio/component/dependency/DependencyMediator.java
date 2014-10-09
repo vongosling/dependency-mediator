@@ -34,14 +34,14 @@ import org.objectweb.asm.Opcodes;
  * <p>
  * 2. Support component scan,including jar,war,ear and sar
  * <p>
- * 3. Support duplicate classes scan,duplicate means the same fully-qualified
+ * 3. Support conflicting classes scan,conflicting means the same fully-qualified
  * class name, but not the same digest or incompatible class(details see <a
  * href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-13.html">jls</a>
  * and <a href=
  * "http://www.oracle.com/technetwork/java/javase/compatibility-137541.html"
  * >class compatibility</a>)
  * <p>
- * 4. Check who using this duplicate classes
+ * 4. Check who using this conflicting classes
  * 
  * @author <a href="mailto:fengjia10@gmail.com">Von Gosling</a>
  */
@@ -209,7 +209,7 @@ public class DependencyMediator {
         for (Entry<String, TreeSet<ComponentEntry>> entry : classMap.entrySet()) {
             if (entry.getValue().size() > 1) {
                 count++;
-                System.out.printf("Duplicated component  [%s] was founded in the  path : \n",
+                System.out.printf("Conflicting component  [%s] was founded in the  path : \n",
                         entry.getKey());
                 for (ComponentEntry jar : entry.getValue()) {
                     System.out.printf(" \t%s\n", jar.getPathName());
@@ -217,7 +217,7 @@ public class DependencyMediator {
             }
         }
         if (count == 0) {
-            System.out.println("Congratulations,no component conflict or incompatible !");
+            System.out.println("Congratulations,no conflicting component  exist!");
         }
     }
 
