@@ -76,4 +76,4 @@ As we know,when we are building a web project,we often use maven dependency plug
 but if we build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict jar packages.of course,which 
 depend on Java EE container classloader's class loading mechanism.
 
-Now,dependency mediator can help you to solve this problem,if you have better idea or improving suggestion,please contact [me](fengjia10@gmail.com) or join Tencent QQ group:80524460
+Now,dependency mediator can help you to solve this problem,if you have better idea or improving suggestion,please contact [me](fengjia10@gmail.com) or join Tencent QQ group:80524460.
