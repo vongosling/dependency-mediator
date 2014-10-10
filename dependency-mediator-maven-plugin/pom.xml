@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.creative.studio.component</groupId>
+		<groupId>com.github.vongosling</groupId>
 		<artifactId>dependency-mediator-all</artifactId>
 		<version>1.0.0</version>
 	</parent>

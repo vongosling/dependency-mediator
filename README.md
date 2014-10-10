@@ -1,7 +1,7 @@
 # Dependency mediator project
 
-##### Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflict or incompatible problems before the runtime(try to remedy some unexpected exceptions or errors),also it can help you find the compatible problem between any two java component.
-##### Nowadays,I have provided one maven plugin.but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future. 
+##### Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflicting problems before the runtime(try to remedy some unexpected errors,such as NoSuchMethodError,NoSuchFieldError,NoClassDefFoundError)
+##### Nowadays,I have initiated a dependency mediator project, but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future. 
  
 ## Features
 ###### 1.Compatible with maven 3.x.x plugin programming model
@@ -27,7 +27,7 @@
 
 ### Maven plugin(Compatible with maven 3.x.x)
 	<plugin>
-		<groupId>com.creative.studio.component</groupId>
+		<groupId>com.github.vongosling</groupId>
 		<artifactId>dependency-mediator-maven-plugin</artifactId>
 		<version>1.0.0</version>
 	</plugin>
@@ -35,7 +35,7 @@
 you can also add plugin's groupId to the list of groupIds searched by default. To do this, you need to add the following to your ${user.home}/.m2/settings.xml file:
 
     <pluginGroups>
-       <pluginGroup>com.creative.studio.component</pluginGroup>
+       <pluginGroup>com.github.vongosling</pluginGroup>
     </pluginGroups>
 
 finally,you can run the mojo with ***mvn mediator:check***
@@ -45,7 +45,7 @@ finally,you can run the mojo with ***mvn mediator:check***
 After import the following jar
 
     <dependency>
-       <groupId>com.creative.studio.component</groupId>
+       <groupId>com.github.vongosling</groupId>
 	   <artifactId>dependency-mediator-core</artifactId>
 	   <version>1.0.0-SNAPSHOT</version>
 	</dependency>
