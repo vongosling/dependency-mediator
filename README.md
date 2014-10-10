@@ -53,8 +53,11 @@ After import the following jar
 You can invoke the command ***mvn exec:java -Dexec.args="scanWhere -DscanClasspath"*** in maven project or invoke class DependencyMediator
 ## Usecase
 Output may be like this if you use standalone mode:
-   
-    Output component reactor info......
+ 	    
+ 	Output component reactor info......
+    Conflicting component  [com.alibaba.rocketmq.storm.MessageConsumerManager] was founded in the  path : 
+ 	    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT-11/com/alibaba/rocketmq/storm/MessageConsumerManager.class
+ 	    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT.jar:com/alibaba/rocketmq/storm/MessageConsumerManager.class
     Conflicting component  [com.alibaba.rocketmq.storm.MessageConsumer] was founded in the  path : 
  	    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT-11/com/alibaba/rocketmq/storm/MessageConsumer.class
  	    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT/com/alibaba/rocketmq/storm/MessageConsumer.class

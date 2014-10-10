@@ -173,6 +173,8 @@ public class DependencyMediator {
                     cEntry.setName(keyName);
                     cEntry.setEntry(jarEntry);
                     cEntry.setDigest(getDigest(jarFile.getInputStream(jarEntry)));
+                    
+                    ComponentContainer.put(keyName, cEntry);
                 }
             } else {
                 //Handle MANIFEST 
