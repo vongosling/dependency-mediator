@@ -24,9 +24,9 @@
 	</modules>
 
 	<scm>
-		<connection>scm:git:git@github.com:vongosling/dependency-mediator.git</connection>
-		<developerConnection>scm:git:git@github.com:vongosling/dependency-mediator.git</developerConnection>
 		<url>https://github.com/vongosling/dependency-mediator</url>
+		<connection>scm:git:ssh://git@github.com:vongosling/dependency-mediator.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:vongosling/dependency-mediator.git</developerConnection>
 	</scm>
 
 	<developers>
