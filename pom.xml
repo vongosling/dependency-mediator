@@ -32,7 +32,7 @@
 	</licenses>
 
 	<scm>
-		<url>scm:git:ssh://git@github.com:vongosling/dependency-mediator.git</url>
+		<url>https://github.com/vongosling/dependency-mediator</url>
 		<connection>scm:git:ssh://git@github.com:vongosling/dependency-mediator.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com:vongosling/dependency-mediator.git</developerConnection>
 	</scm>
@@ -68,6 +68,11 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.1</version>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -234,11 +239,6 @@
 					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
 					<xmlOutput>true</xmlOutput>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.1</version>
 			</plugin>
 		</plugins>
 	</reporting>
