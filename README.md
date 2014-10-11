@@ -18,7 +18,7 @@
 ###### Feature - Abstract version incompatible algorithm,support customized version diff strategy;
 ###### Feature - Support conflicting incompatible class scan
  
-###### 1.0.0 release on 2014.10.08
+###### 1.0.1 release on 2014.10.11
 ###### Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
 ###### Feature - Core module support directory scan,also including classpath if you set property scanClasspath;
 ###### Feature - Support conflicting digest classes scan
@@ -29,7 +29,7 @@
 	<plugin>
 		<groupId>com.github.vongosling</groupId>
 		<artifactId>dependency-mediator-maven-plugin</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	</plugin>
 
 you can also add plugin's groupId to the list of groupIds searched by default. To do this, you need to add the following to your ${user.home}/.m2/settings.xml file:
@@ -47,7 +47,7 @@ After import the following jar
     <dependency>
        <groupId>com.github.vongosling</groupId>
 	   <artifactId>dependency-mediator-core</artifactId>
-	   <version>1.0.0-SNAPSHOT</version>
+	   <version>1.0.1</version>
 	</dependency>
 	
 You can invoke the command ***mvn exec:java -Dexec.args="scanWhere -DscanClasspath"*** in maven project or invoke class DependencyMediator
