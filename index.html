@@ -3,33 +3,34 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
     <title>Dependency-mediator by vongosling</title>
   </head>
 
   <body>
-
     <header>
-      <div class="container">
+      <div class="inner">
         <h1>Dependency-mediator</h1>
         <h2>Concentrated on solving java components conflict problem!</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/vongosling/dependency-mediator/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/vongosling/dependency-mediator/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/vongosling/dependency-mediator" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
+        <a href="https://github.com/vongosling/dependency-mediator" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
 
-    <div class="container">
-      <section id="main_content">
-        <h1>
-<a name="dependency-mediator-project" class="anchor" href="#dependency-mediator-project"><span class="octicon octicon-link"></span></a>Dependency mediator project</h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="dependency-mediator-project--" class="anchor" href="#dependency-mediator-project--"><span class="octicon octicon-link"></span></a>Dependency mediator project  <a href="https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master"><img src="https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master" alt="Build Status"></a>
+</h1>
 
 <h5>
 <a name="unlike-karaf-and-other-lightness-osgi-solutionsdependency-mediator-focus-on-shooting-the-conflicting-problems-before-the-runtimetry-to-remedy-some-unexpected-errorssuch-as-nosuchmethoderrornosuchfielderrornoclassdeffounderror" class="anchor" href="#unlike-karaf-and-other-lightness-osgi-solutionsdependency-mediator-focus-on-shooting-the-conflicting-problems-before-the-runtimetry-to-remedy-some-unexpected-errorssuch-as-nosuchmethoderrornosuchfielderrornoclassdeffounderror"><span class="octicon octicon-link"></span></a>Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflicting problems before the runtime(try to remedy some unexpected errors,such as NoSuchMethodError,NoSuchFieldError,NoClassDefFoundError.</h5>
@@ -71,7 +72,7 @@
 <a name="feature---support-conflicting-incompatible-class-scan" class="anchor" href="#feature---support-conflicting-incompatible-class-scan"><span class="octicon octicon-link"></span></a>Feature - Support conflicting incompatible class scan</h6>
 
 <h6>
-<a name="100-release-on-20141008" class="anchor" href="#100-release-on-20141008"><span class="octicon octicon-link"></span></a>1.0.0 release on 2014.10.08</h6>
+<a name="101-release-on-20141011" class="anchor" href="#101-release-on-20141011"><span class="octicon octicon-link"></span></a>1.0.1 release on 2014.10.11</h6>
 
 <h6>
 <a name="feature---compatible-with-jdk-6maven-22x-and-3xx-plugin-programming-model" class="anchor" href="#feature---compatible-with-jdk-6maven-22x-and-3xx-plugin-programming-model"><span class="octicon octicon-link"></span></a>Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;</h6>
@@ -91,7 +92,7 @@
 <pre><code>&lt;plugin&gt;
     &lt;groupId&gt;com.github.vongosling&lt;/groupId&gt;
     &lt;artifactId&gt;dependency-mediator-maven-plugin&lt;/artifactId&gt;
-    &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;version&gt;1.0.1&lt;/version&gt;
 &lt;/plugin&gt;
 </code></pre>
 
@@ -112,7 +113,7 @@
 <pre><code>&lt;dependency&gt;
    &lt;groupId&gt;com.github.vongosling&lt;/groupId&gt;
    &lt;artifactId&gt;dependency-mediator-core&lt;/artifactId&gt;
-   &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+   &lt;version&gt;1.0.1&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -124,6 +125,9 @@
 <p>Output may be like this if you use standalone mode:</p>
 
 <pre><code>Output component reactor info......
+Conflicting component  [com.alibaba.rocketmq.storm.MessageConsumerManager] was founded in the  path : 
+    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT-11/com/alibaba/rocketmq/storm/MessageConsumerManager.class
+    /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT.jar:com/alibaba/rocketmq/storm/MessageConsumerManager.class
 Conflicting component  [com.alibaba.rocketmq.storm.MessageConsumer] was founded in the  path : 
     /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT-11/com/alibaba/rocketmq/storm/MessageConsumer.class
     /home/von/workspace/rocketmq-storm/dd/rocketmq-storm-1.0.0-SNAPSHOT/com/alibaba/rocketmq/storm/MessageConsumer.class
@@ -147,10 +151,26 @@ but if we build our project to war package according with Java EE specification.
 depend on Java EE container classloader's class loading mechanism.</p>
 
 <p>Now,dependency mediator can help you to solve this problem,if you have better idea or improving suggestion,please contact <a href="fengjia10@gmail.com">me</a> or join Tencent QQ group:80524460.</p>
-      </section>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/vongosling/dependency-mediator/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/vongosling/dependency-mediator/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/vongosling/dependency-mediator"></a> is maintained by <a href="https://github.com/vongosling">vongosling</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-              <script type="text/javascript">
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
