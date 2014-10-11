@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.vongosling</groupId>
 	<artifactId>dependency-mediator-all</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>versatile java component dependency mediator</name>
 	<description>versatile java component dependency mediator</description>
 	<url>http://vongosling.github.io/dependency-mediator/</url>
@@ -35,7 +34,8 @@
 		<url>https://github.com/vongosling/dependency-mediator</url>
 		<connection>scm:git:git@github.com:vongosling/dependency-mediator.git</connection>
 		<developerConnection>scm:git:git@github.com:vongosling/dependency-mediator.git</developerConnection>
-	</scm>
+	  <tag>dependency-mediator-all-1.0.0</tag>
+  </scm>
 
 	<developers>
 		<developer>
