@@ -1,4 +1,4 @@
-# Dependency mediator project
+# Dependency mediator project[![Build Status](https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master)](https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master)
 
 ##### Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflicting problems before the runtime(try to remedy some unexpected errors,such as NoSuchMethodError,NoSuchFieldError,NoClassDefFoundError.
 ##### Nowadays,I have initiated a dependency mediator project, but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future. 
