@@ -4,7 +4,7 @@
 	<groupId>com.github.vongosling</groupId>
 	<artifactId>dependency-mediator-all</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>versatile java component dependency mediator</name>
 	<description>versatile java component dependency mediator</description>
 	<url>http://vongosling.github.io/dependency-mediator/</url>
@@ -34,7 +34,7 @@
 		<url>https://github.com/vongosling/dependency-mediator</url>
 		<connection>scm:git:git@github.com:vongosling/dependency-mediator.git</connection>
 		<developerConnection>scm:git:git@github.com:vongosling/dependency-mediator.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>dependency-mediator-all-1.0.1</tag>
   </scm>
 
 	<developers>
