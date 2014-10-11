@@ -23,6 +23,14 @@
 		<module>dependency-mediator-maven-plugin</module>
 	</modules>
 
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
 	<scm>
 		<url>scm:git:ssh://git@github.com:vongosling/dependency-mediator.git</url>
 		<connection>scm:git:ssh://git@github.com:vongosling/dependency-mediator.git</connection>
@@ -43,14 +51,6 @@
 			</roles>
 		</developer>
 	</developers>
-
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
 
 	<dependencies>
 		<dependency>
@@ -234,6 +234,11 @@
 					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
 					<xmlOutput>true</xmlOutput>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.1</version>
 			</plugin>
 		</plugins>
 	</reporting>
