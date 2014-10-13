@@ -82,6 +82,6 @@ As we know,when we are developing a java project,getting used to use maven depen
 
     mvn dependency:tree -Dverbose -DoutputFile=out.txt -DoutputType=dot
     
-but if we need to build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict packages.of course,which depend on Java EE container classloader's class loading mechanism.
+but if we need to build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict packages.of course,which depend on Java EE container class loading mechanism.
 
 Now,dependency mediator can help you to solve this problems,if you have better idea or improving suggestion,please contact [me](fengjia10@gmail.com) or join Tencent QQ group:80524460.
