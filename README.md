@@ -78,7 +78,7 @@ But if you using maven plugin,ouput may be like this:
 
 ## Background 
 
-As we know,when we are developing a java project,getting used to use maven dependency plugin(if maven project) to solve the jar conflicting problem,you may be using maven dependency plugin：
+As we know,when we are developing a java project,getting used to use maven dependency plugin to solve the jar conflicting problem,may be using maven dependency plugin：
 
     mvn dependency:tree -Dverbose -DoutputFile=out.txt -DoutputType=dot
     
