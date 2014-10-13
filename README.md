@@ -28,7 +28,7 @@ Nowadays,I have initiated a dependency mediator project, but in my opinion,integ
 
 ## How to Use
 
-### Maven plugin(Compatible with maven 3.x.x,Latest version can be search from [maven center repository](http://search.maven.org/#search%7Cga%7C1%7Cdependency-mediator-maven-plugin))
+### Maven plugin(Compatible with maven 3.x.x,Latest version can be founded from [maven center repository](http://search.maven.org/#search%7Cga%7C1%7Cdependency-mediator-maven-plugin))
 	<plugin>
 		<groupId>com.github.vongosling</groupId>
 		<artifactId>dependency-mediator-maven-plugin</artifactId>
