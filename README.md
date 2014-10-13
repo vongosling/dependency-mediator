@@ -1,4 +1,4 @@
-# Dependency mediator project  [![Build Status](https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master)](https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master)
+# Dependency mediator project  [![Build Status](https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master)](https://travis-ci.org/vongosling/dependency-mediator)
 
 
 Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflicting problems before the runtime(try to remedy some unexpected errors,such as NoSuchMethodError,NoSuchFieldError and NoClassDefFoundError etc.
