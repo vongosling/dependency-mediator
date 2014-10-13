@@ -1,9 +1,9 @@
 # Dependency mediator project  [![Build Status](https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master)](https://travis-ci.org/vongosling/dependency-mediator)
 
 
-Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflicting problems before the runtime(try to remedy some unexpected errors,such as NoSuchMethodError,NoSuchFieldError and NoClassDefFoundError etc.
+Unlike karaf and other lightness modular technology(like osgi,class names do not need to be unique,but the combination of class names and their defining ClassLoader must to be unique.),dependency mediator try to remedy compononet dependency conflicting problem before the runtime rather than using customized classLoader to agree with  the coexistence of different version components,thus avoided some well-konwn errors,such as NoSuchMethodError,NoSuchFieldError and NoClassDefFoundError etc.
 
-Nowadays,I have initiated a dependency mediator project, but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future. 
+Nowadays,I have initiated a dependency mediator project, but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try and donate this project to codehaus in the near future. 
  
 ## Features
 * Compatible with maven 3.x.x plugin programming model
@@ -78,8 +78,6 @@ But if you using maven plugin,ouput may be like this:
 
 ## Background 
 
-As we know,when we are building a web project,we often use maven dependency plugin(if maven project) to solve the jar conflicting problem,such as:mvn dependency:tree -Dverbose -Dincludes=commons-collections,
-but if we build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict jar packages.of course,which 
-depend on Java EE container classloader's class loading mechanism.
+As we know,when we are developing java project,we often use maven dependency plugin(if maven project) to solve the jar conflicting problem,you may be using maven dependency plugin(mvn dependency:tree -Dverbose mvn dependency:tree  -DoutputFile=out.txt -DoutputType=dot).but if we need to build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict packages.of course,which depend on Java EE container classloader's class loading mechanism.
 
-Now,dependency mediator can help you to solve this problem,if you have better idea or improving suggestion,please contact [me](fengjia10@gmail.com) or join Tencent QQ group:80524460.
+Now,dependency mediator can help you to solve this problems,if you have better idea or improving suggestion,please contact [me](fengjia10@gmail.com) or join Tencent QQ group:80524460.
