@@ -32,9 +32,9 @@
 <a name="dependency-mediator-project--" class="anchor" href="#dependency-mediator-project--"><span class="octicon octicon-link"></span></a>Dependency mediator project  <a href="https://travis-ci.org/vongosling/dependency-mediator"><img src="https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master" alt="Build Status"></a>
 </h1>
 
-<p>Unlike karaf and other lightness OSGI solutions,dependency mediator focus on shooting the conflicting problems before the runtime(try to remedy some unexpected errors,such as NoSuchMethodError,NoSuchFieldError and NoClassDefFoundError etc.</p>
+<p>Unlike karaf and other lightness modular technology(like osgi,class names do not need to be unique,but the combination of class names and their defining ClassLoader must to be unique),dependency mediator try to remedy compononet dependency conflicting problem before the runtime rather than using customized classLoader to agree with  the coexistence of different version components,thus avoided some well-konwn errors,such as NoSuchMethodError,NoSuchFieldError and NoClassDefFoundError etc.</p>
 
-<p>Nowadays,I have initiated a dependency mediator project, but in my opinion,integration with the maven standard enforcer plugin may be a better choice, i would try in the near future. </p>
+<p>Nowadays,I have initiated a dependency mediator project, but in my opinion,integration with the maven enforcer plugin may be a better choice, I would try and donate this project to codehaus in the near future. </p>
 
 <h2>
 <a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
@@ -72,7 +72,7 @@
 <a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to Use</h2>
 
 <h3>
-<a name="maven-plugincompatible-with-maven-3xx" class="anchor" href="#maven-plugincompatible-with-maven-3xx"><span class="octicon octicon-link"></span></a>Maven plugin(Compatible with maven 3.x.x)</h3>
+<a name="maven-plugincompatible-with-maven-3xxlatest-version-can-be-founded-from-maven-center-repository" class="anchor" href="#maven-plugincompatible-with-maven-3xxlatest-version-can-be-founded-from-maven-center-repository"><span class="octicon octicon-link"></span></a>Maven plugin(Compatible with maven 3.x.x,Latest version can be founded from <a href="http://search.maven.org/#search%7Cga%7C1%7Cdependency-mediator-maven-plugin">maven center repository</a>)</h3>
 
 <pre><code>&lt;plugin&gt;
     &lt;groupId&gt;com.github.vongosling&lt;/groupId&gt;
@@ -131,11 +131,14 @@ Conflicting component  [com.alibaba.rocketmq.storm.MessageConsumer] was founded 
 <h2>
 <a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h2>
 
-<p>As we know,when we are building a web project,we often use maven dependency plugin(if maven project) to solve the jar conflicting problem,such as:mvn dependency:tree -Dverbose -Dincludes=commons-collections,
-but if we build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict jar packages.of course,which 
-depend on Java EE container classloader's class loading mechanism.</p>
+<p>As we know,when we are developing a java project,getting used to use maven dependency plugin to solve the jar conflicting problem,may be using maven dependency plugin：</p>
 
-<p>Now,dependency mediator can help you to solve this problem,if you have better idea or improving suggestion,please contact <a href="fengjia10@gmail.com">me</a> or join Tencent QQ group:80524460.</p>
+<pre><code>mvn dependency:tree -Dverbose -DoutputFile=out.txt -DoutputType=dot
+</code></pre>
+
+<p>but if we need to build our project to war package according with Java EE specification.we always have nothing to do but with the naked eye to lookup some underlying conflict packages.of course,which depend on Java EE container class loading mechanism.</p>
+
+<p>Now,dependency mediator can help you to solve this problems,if you have better idea or improving suggestion,please contact <a href="fengjia10@gmail.com">me</a> or join Tencent QQ group:80524460.</p>
         </section>
 
         <aside id="sidebar">
