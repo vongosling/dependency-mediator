@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.github.vongosling</groupId>
 		<artifactId>dependency-mediator-all</artifactId>
-		<version>1.0.2</version>
+		<version>1.0.3-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>dependency-mediator-core</artifactId>
