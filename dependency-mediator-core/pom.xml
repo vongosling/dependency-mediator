@@ -11,7 +11,7 @@
 	<name>component dependency mediator core implementation</name>
 
 	<properties>
-		<main.class>org.apache.component.dependency.DependencyMediator</main.class>
+		<main.class>com.creative.studio.component.dependency.DependencyMediator</main.class>
 	</properties>
 
    <!--  
