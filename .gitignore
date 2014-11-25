@@ -2,6 +2,7 @@
 .classpath
 .settings*
 target/
+bin/
 *.log*
 *.iml
 .idea/
