@@ -32,7 +32,7 @@ Nowadays,I have initiated a dependency mediator project, but in my opinion,integ
 	<plugin>
 		<groupId>com.github.vongosling</groupId>
 		<artifactId>dependency-mediator-maven-plugin</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 	</plugin>
 
 you can also add plugin's groupId to the list of groupIds searched by default. To do this, you need to add the following to your ${user.home}/.m2/settings.xml file:
@@ -50,7 +50,7 @@ After import the following jar
     <dependency>
        <groupId>com.github.vongosling</groupId>
 	   <artifactId>dependency-mediator-core</artifactId>
-	   <version>1.0.1</version>
+	   <version>1.0.2</version>
 	</dependency>
 	
 You can invoke the command ***mvn exec:java -Dexec.mainClass="com.creative.studio.component.dependency.DependencyMediator" -Dexec.args="scanFromWhere -DscanClasspath"*** in maven project or invoke class DependencyMediator.**-Dexec.args** is an optional parameter.
