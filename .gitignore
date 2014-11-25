@@ -1,5 +1,6 @@
 .project
-.settings/
+.classpath
+.settings*
 target/
 *.log*
 *.iml
