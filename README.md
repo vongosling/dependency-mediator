@@ -53,7 +53,7 @@ After import the following jar
 	   <version>1.0.1</version>
 	</dependency>
 	
-You can invoke the command ***mvn exec:java -Dexec.args="scanWhere -DscanClasspath"*** in maven project or invoke class DependencyMediator
+You can invoke the command ***mvn exec:java -Dexec.mainClass="com.creative.studio.component.dependency.DependencyMediator" -Dexec.args="scanFromWhere -DscanClasspath"*** in maven project or invoke class DependencyMediator
 ## Usecase
 Output may be like this if you use standalone mode:
  	    
