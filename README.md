@@ -1,7 +1,7 @@
 # Dependency mediator project  [![Build Status](https://travis-ci.org/vongosling/dependency-mediator.svg?branch=master)](https://travis-ci.org/vongosling/dependency-mediator)
 
 
-Unlike karaf and other lightness modular technology(like osgi,class names do not need to be unique,but the combination of class names and their defining ClassLoader must to be unique),dependency mediator try to remedy compononet dependency conflicting problem before the runtime rather than using customized classLoader to agree with  the coexistence of different version components,thus avoid some well-konwn errors,such as NoSuchMethodError,NoSuchFieldError and NoClassDefFoundError etc.
+Unlike karaf and other lightness modular technology(like osgi,class names do not need to be unique,but the combination of class names and their defining ClassLoader must to be unique),dependency mediator try to remedy component dependency conflicting problem before the runtime rather than using customized classLoader to agree with  the coexistence of different version components,thus avoid some well-konwn errors,such as NoSuchMethodError,NoSuchFieldError and NoClassDefFoundError etc.
 
 Nowadays,I have initiated a dependency mediator project, but in my opinion,integration with the maven enforcer plugin may be a better choice, I would try and donate this project to codehaus in the near future. 
  
