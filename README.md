@@ -20,7 +20,7 @@ Nowadays,I have initiated a dependency mediator project, but in my opinion,integ
 * Optimize - less code,more things;
 * Feature - Abstract version incompatible algorithm,support customized version diff strategy;
 * Feature - Support conflicting incompatible class scan
-* 
+
 ### 1.0.2 release on 2014.10.25
 * Bugfix - Rename bootstrap class package to com.creative.studio...
  
