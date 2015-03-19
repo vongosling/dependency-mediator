@@ -16,10 +16,13 @@ Nowadays,I have initiated a dependency mediator project, but in my opinion,integ
 
 ## Available version
 
-### 1.1.0 will release on 2014.11.08
+### 1.1.0 will release on 2015.4.08
 * Optimize - less code,more things;
 * Feature - Abstract version incompatible algorithm,support customized version diff strategy;
 * Feature - Support conflicting incompatible class scan
+* 
+### 1.0.2 release on 2014.10.25
+* Bugfix - Rename bootstrap class package to com.creative.studio...
  
 ### 1.0.1 release on 2014.10.11
 * Feature - Compatible with JDK 6+,maven 2.2.x and 3.x.x plugin programming model;
