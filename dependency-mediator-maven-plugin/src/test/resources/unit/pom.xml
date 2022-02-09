@@ -14,7 +14,7 @@
 		<autoconfig-plugin-version>1.2</autoconfig-plugin-version>
 
 		<!-- https://cwiki.apache.org/confluence/display/WW/Security+Bulletins -->
-		<struts2.version>2.5.22</struts2.version>
+		<struts2.version>2.5.26</struts2.version>
 		<spring.version>3.2.4.RELEASE</spring.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<curator.version>2.3.0</curator.version>
