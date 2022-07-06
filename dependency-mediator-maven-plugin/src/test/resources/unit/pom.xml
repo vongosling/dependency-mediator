@@ -20,7 +20,7 @@
 		<curator.version>2.3.0</curator.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<fastjson.version>1.2.25</fastjson.version>
-		<dwr.version>3.0.rc2</dwr.version>
+		<dwr.version>3.0.1-RELEASE</dwr.version>
 		<junit.version>4.11</junit.version>
 	</properties>
 
