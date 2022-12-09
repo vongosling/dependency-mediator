@@ -15,7 +15,7 @@
 
 		<!-- https://cwiki.apache.org/confluence/display/WW/Security+Bulletins -->
 		<struts2.version>2.5.22</struts2.version>
-		<spring.version>3.2.4.RELEASE</spring.version>
+		<spring.version>6.0.0</spring.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<curator.version>2.3.0</curator.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
